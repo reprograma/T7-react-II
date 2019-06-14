@@ -14,9 +14,8 @@ export default class Cadastro extends Component {
         }
     }
 
-    handleClick = e => {
-        e.preventDefault()
-        const clique = e.target.value
+    handleClick = (value) => {
+        const clique = value
         console.log(clique, "clicou")
         
         this.setState({

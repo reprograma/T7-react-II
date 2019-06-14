@@ -5,6 +5,7 @@ import Globe from '../../imagens/globe.png'
 
 export default function Inicial(props) {
 
+    
     return(
         <div className='pagina'>
             <h1> Escolha qual tipo de cadastro: </h1>
