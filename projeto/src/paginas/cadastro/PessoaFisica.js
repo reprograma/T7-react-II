@@ -53,6 +53,7 @@ export default class PessoaFisica extends React.Component {
 
     render() {
         const desabilitado = this.estaDesabilitado()
+        
         return (
             <div className='pagina'>
                 <h2>Cadastro Pessoa Fisica </h2>
