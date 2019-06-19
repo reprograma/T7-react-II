@@ -8,8 +8,16 @@ import React from 'react'
 // }
 
 export default function BotaoSubmit(props) {
+    console.log(props, "props botao")
+    // let classes = props.classeBotao
+    // if(props.desabilitado){
+    //     classes += ' botao--desabilitado'
+    // }
+
+    let classes = props.desabilitado ? (props.classeBotao + ' botao--desabilitado') : props.classeBotao
+    
     return (
-        <button className={props.classeBotao} onClick={props.acaoBotao}>
+        <button className={classes} onClick={props.acaoBotao}>
             {props.children}
         </button>
     )

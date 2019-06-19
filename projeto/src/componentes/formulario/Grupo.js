@@ -3,6 +3,7 @@ import Legenda from './Legenda';
 import CaixaTexto from './CaixaTexto';
 
 export default function Grupo(props) {
+    console.log(props, "props Grupo")
     return(
         <div>
             {props.children}

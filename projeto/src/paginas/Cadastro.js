@@ -3,6 +3,7 @@ import './cadastro.css'
 import Inicial from './cadastro/Inicial'
 import PessoaFisica from './cadastro/PessoaFisica'
 import PessoaJuridica from './cadastro/PessoaJuridica'
+import Final from './cadastro/Final';
 
 export default class Cadastro extends React.Component {
     constructor(props) {
@@ -28,11 +29,16 @@ export default class Cadastro extends React.Component {
                 }
                 {
                      this.state.conteudo === "PF" && 
-                     <PessoaFisica />
+                     <PessoaFisica conteudo="final" alteraConteudo={this.handleMudaConteudo} 
+                     />
                 }
                 {
                      this.state.conteudo === "PJ" && 
                      <PessoaJuridica />
+                }
+                {
+                    this.state.conteudo === "final" &&
+                    <Final />
                 }
             </div> 
         )

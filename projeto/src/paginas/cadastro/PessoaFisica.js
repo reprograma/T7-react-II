@@ -30,6 +30,7 @@ export default class PessoaFisica extends React.Component {
     }
 
     handleSubmit = e => {
+        this.props.alteraConteudo("final")
         e.preventDefault()
         console.log("enviou")
     }
@@ -44,7 +45,8 @@ export default class PessoaFisica extends React.Component {
     }
 
     estaDesabilitado = () => {
-        if(!this.state.nomeSobrenome.valor || this.state.nomeSobrenome.erro || !this.state.numeroCpf.valor || this.state.numeroCpf.erro || !this.state.dataNascimento.valor || this.state.dataNascimento.erro || !this.state.email.valor || this.state.email.erro || !this.state.senha.valor || this.state.senha.erro) {
+        const { nomeSobrenome, numeroCpf, dataNascimento, email, senha } = this.state //destructuring
+        if(!nomeSobrenome.valor || nomeSobrenome.erro || !numeroCpf.valor || numeroCpf.erro || !dataNascimento.valor || dataNascimento.erro || !email.valor || email.erro || !senha.valor || senha.erro) {
             return true
         } else {
             return false
